@@ -47,7 +47,7 @@ const Posts = () => {
             <div className='first' key={`post-${post.id}`}> 
             <h1>{post.id}</h1>
             <p>{post.title}</p>
-            <p>{post.body}</p>
+            <p>{post.body.slice(0, 20)} <Link to={`/posts/${post.id}`}>More...</Link></p>
             <button onClick={onPostClick}>Details</button>
             </div>
             </div>
